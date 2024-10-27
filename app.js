@@ -49,7 +49,7 @@ function draw(e) { // Draw shapes based on the tool thats chosen
     const width = endX - startX;
     const height = endY - startY;
 
-    // Draw based on choosen shape
+    // Draw based on chosen shape builds
     if (currentShape === 'line') {
         ctx.moveTo(startX, startY);
         ctx.lineTo(endX, endY);
@@ -64,13 +64,13 @@ function draw(e) { // Draw shapes based on the tool thats chosen
 }
 // Task 4: Add Canvas Clearing and Color Selection
 
-const colorPicker = document.getElementById('colorPicker'); // selecting color
+const colorPicker = document.getElementById('colorPicker'); // selected color
 colorPicker.addEventListener('input', (e) => {
     selectedColor = e.target.value;
 });
 
 
-const clearButton = document.getElementById('clearCanvas'); // clear canvas event listener
+const clearButton = document.getElementById('clearCanvas'); // clear canvas 
 clearButton.addEventListener('click', () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 });
